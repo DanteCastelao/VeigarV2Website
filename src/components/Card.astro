@@ -1,0 +1,33 @@
+---
+import CardBackground from '../assets/CardBackground.png';
+const {title} = Astro.props;
+
+---
+
+
+<div class="container" style={{ backgroundImage: `url(${CardBackground.src})` }}>
+    <slot></slot>
+    <span>{title}</span>
+</div>
+
+<style>
+    .container {
+        aspect-ratio: 5/3;
+        border: 1px solid #212121;
+        border-radius: 6px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: cover;
+        gap: 1.4rem;
+    }
+    span {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #E7E7F0;
+        text-align: center;
+    }
+
+</style>
