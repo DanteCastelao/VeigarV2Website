@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home">
+	<div class="light"/>
 	<div class="title">Veigar v2 turns coaching into an extraordinary experience</div>
 	<div class="cards">
 		<Card title="Coaching for Teams">
@@ -89,7 +90,9 @@ import Layout from '../layouts/Layout.astro';
 	<div class="youtube">
 		Watch him in Action!
 		<iframe class="video" src="https://www.youtube.com/embed/TityiUfWoFY" title="Veigar V2 Coaching Challenger China + EUW TF | Example Of A Coaching Session" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<div class="light2" />
 	</div>
+	
 </Layout>
 
 <style>
@@ -197,5 +200,26 @@ import Layout from '../layouts/Layout.astro';
 		margin-top: 6rem;
 		width: 40%;
 		aspect-ratio: 16/9;
+	}
+	.light {
+		background-color: #4B3A84;
+		filter: blur(200px);
+		width: 811px;
+		height: 496px;
+		position: absolute;
+		z-index: -1;
+		top: -50vh;
+		left: 50%;
+    	transform: translate(-50%, 0);
+	}
+	.light2 {
+		background-color: #4B3A84;
+		filter: blur(200px);
+		width: 811px;
+		height: 496px;
+		position: absolute;
+		z-index: -1;
+		left: 50%;
+    	transform: translate(-50%, 50%);
 	}
 </style>
