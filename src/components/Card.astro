@@ -1,33 +1,65 @@
 ---
-import CardBackground from '../assets/CardBackground.png';
 const {title} = Astro.props;
 
 ---
 
 
-<div class="container" style={{ backgroundImage: `url(${CardBackground.src})` }}>
-    <slot></slot>
-    <span>{title}</span>
+<div class="container">
+    <div class="container-2">
+        <slot></slot>
+        <span>{title}</span>
+        <div class="light"></div>
+    </div>
+    <div class="back-lights"></div>
 </div>
 
 <style>
     .container {
         aspect-ratio: 5/3;
         border: 1px solid #212121;
-        border-radius: 6px;
+        background-color: #07030F;
+        display: flex;
         width: 100%;
+        border-radius: 6px;
+        position: relative;
+    }
+    .container-2 {
+        background-color: rgba(255, 255, 255, 0.02);
         display: flex;
         justify-content: center;
         flex-direction: column;
         background-repeat: no-repeat;
         background-size: cover;
         gap: 1.4rem;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
     }
     span {
         font-size: 1.2rem;
         font-weight: 600;
-        color: #E7E7F0;
+        color: #fff;
         text-align: center;
+        z-index: 2;
+    }
+    .light {
+        width: 60%;
+        height: 80%;
+        bottom: 0;
+        left: 20%;
+        position: absolute;
+        background-color: #3D3067;
+        filter: blur(100px);
+        z-index: 1;
+    }
+    .back-lights {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #3D3067;
+        filter: blur(4px);
+        z-index: -1;
     }
 
 </style>

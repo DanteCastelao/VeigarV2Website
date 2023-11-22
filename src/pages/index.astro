@@ -48,7 +48,6 @@ import Layout from '../layouts/Layout.astro';
 		<div class="about">
 			<span class="subtitle">About Veigar v2</span>
 			<span>Marius "Veigar v2" Aune is a Norwegian League of Legends coach. He was the Strategic Coach and Analyst for various LCS/LEC teams, currently working for Cloud9 in the LCS. Outside of League, he likes to take care of his bunny Snoopy.</span>
-			
 		</div>
 		<a class="more">
 			Read more 
@@ -57,9 +56,7 @@ import Layout from '../layouts/Layout.astro';
 				<path d="M6.5 3.95834L10.2917 9.5L6.5 15.0417" stroke="white" stroke-opacity="0.92" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg>
 		</a>
-		<div class="grid-background">
-
-		</div>
+		<div class="back-light" />
 	</div>
 	<div class="infos">
 			<Info title="Experience">
@@ -116,20 +113,26 @@ import Layout from '../layouts/Layout.astro';
 	}
 	.icon {
 		text-align: center;
+		z-index: 2;
 	}
 	.break {
 		margin-top: 14rem;
-		width: 100%;
+		width: 60%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
-		background-color: black;
 		position: relative;
+		background-color: rgba(255, 255, 255, 0.02);
+		backdrop-filter: blur(2px);
+		border-radius: 10px;
+		margin-left: 20%;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		overflow: hidden;
 	}
 	.about {
 		padding-top: 2rem;
-		width: 60%;
+		width: 90%;
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
@@ -154,22 +157,20 @@ import Layout from '../layouts/Layout.astro';
 		padding-bottom: 2rem;
 		z-index: 1;
 	}
-	.grid-background {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex: 1;
+	.back-light {
+		background-color: #8952E0;
+		filter: blur(150px);
+		width: 30%;
+		height: 40%;
 		position: absolute;
-		background-size: 100px 110px;
-		background-image:
-			linear-gradient(to right, #140824 1px, transparent 1px),
-			linear-gradient(to bottom, #140824 1px, transparent 1px);
-		z-index: 0;
+		z-index: -1;
+		bottom: 0;
+		left: 35%;
 	}
 	.infos {
 		display: flex;
 		justify-content: space-between;
-		margin-top: 8rem;
+		margin-top: 14rem;
 		gap: 2rem;
 		margin-left: 20%;
 		margin-right: 20%;
