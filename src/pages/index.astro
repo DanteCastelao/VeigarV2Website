@@ -6,7 +6,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Home">
 	<div class="light"/>
-	<div class="title">Veigar v2 turns coaching into an extraordinary experience</div>
+	<div class="center">
+		<div class="title">Veigar v2 turns coaching into an extraordinary experience</div>
+	</div>
 	<div class="cards">
 		<Card title="Coaching for Teams">
 			<div class="icon">
@@ -93,28 +95,96 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+	.center {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
 	.title {
 		font-size: 3rem;
 		color: #E7E7F0;
 		font-weight: 700;
-		text-align: center;
 		width: 46%;
 		display: flex;
-		margin-left: 27%;
 		margin-top: 12rem;
+		text-align: center;
+	}
+	@media only screen and (max-width: 992px) {
+		.title {
+			width: 70%;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.title {
+			width: 80%;
+		}
 	}
 	.cards {
 		display: flex;
 		justify-content: space-between;
 		margin-top: 10rem;
 		gap: 4rem;
+		width: 60%;
 		margin-left: 20%;
 		margin-right: 20%;
+	}
+
+	@media only screen and (max-width: 992px) {
+		.cards {
+			width: 70%;
+			margin-left: 15%;
+			margin-right: 15%;
+			gap: 2rem;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.cards {
+			width: 84%;
+			margin-left: 8%;
+			margin-right: 8%;
+			gap: 2rem;
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.cards {
+			width: 96%;
+			margin-left: 2%;
+			margin-right: 2%;
+			gap: 1rem;
+			flex-direction: column;
+		}
 	}
 	.icon {
 		text-align: center;
 		z-index: 2;
+		max-height: 50px;
 	}
+
+	.icon svg {
+		width: auto;
+		height: 100%;
+	} 
+
+	@media only screen and (max-width: 1200px) {
+		.icon {
+			max-height: 35%; 
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.icon {
+			max-height: 30%; 
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.icon {
+			max-height: none; 
+		}
+	}
+
 	.break {
 		margin-top: 14rem;
 		width: 60%;
@@ -175,6 +245,28 @@ import Layout from '../layouts/Layout.astro';
 		margin-left: 15%;
 		margin-right: 15%;
 	}
+	@media only screen and (max-width: 992px) {
+		.infos {
+			margin-left: 10%;
+			margin-right: 10%;
+			gap: 2rem;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.infos {
+			margin-left: 5%;
+			margin-right: 5%;
+			gap: 2rem;
+		}
+	}
+	@media only screen and (max-width: 480px) {
+		.infos {
+			margin-left: 2%;
+			margin-right: 2%;
+			gap: 4rem;
+			flex-direction: column;
+		}
+	}
 	.info-2 {
 		width: 18rem;
 	}
@@ -202,6 +294,21 @@ import Layout from '../layouts/Layout.astro';
 		margin-top: 6rem;
 		width: 40%;
 		aspect-ratio: 16/9;
+	}
+	@media only screen and (max-width: 992px) {
+		.video {
+			width: 60%;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.video {
+			width: 80%;
+		}
+	}
+	@media only screen and (max-width: 480px) {
+		.video {
+			width: 100%;
+		}
 	}
 	.light {
 		background-color: #8952E0;

@@ -7,7 +7,9 @@ import VeigarLogo from "../assets/VeigarLogo.png"
             <img src={VeigarLogo.src} alt="Veigar Logo"/>
             <span>Veigar <span id="purple">v2</span></span>
         </div>
-        Veigar v2 Coaching is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends™ and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
+        <span class="disclaimer-text">
+            Veigar v2 Coaching is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends™ and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
+        </span>
     </div>
     <div class="left">
         <div class="top">
@@ -254,6 +256,44 @@ import VeigarLogo from "../assets/VeigarLogo.png"
         flex-direction: column;
         gap: 1rem;
     }
+    @media only screen and (max-width: 1080px) {
+		.disclaimer-text {
+            display: none;
+        }
+        .footer {
+            padding-left: 5%;
+            padding-right: 5%;
+            gap: 4rem;
+        }
+        .top {
+            gap: 2rem;
+        }
+        .column {
+            gap: 2rem;
+        }
+	}
+    @media only screen and (max-width: 620px) {
+        .footer {
+            flex-direction: column;
+            padding-left: 5%;
+            padding-right: 5%;
+            gap: 2rem;
+        }
+        .left {
+            width: 100%;
+        }
+        .top {
+            width: 100%;
+            justify-content: space-between;
+        }
+        .column {
+            height: 100%;
+        }
+        .disclaimer {
+            width: 100%;
+        }
+    }
+
     .logo {
         display: flex;
         flex-direction: row;
