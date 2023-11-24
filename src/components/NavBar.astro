@@ -4,13 +4,13 @@ import VeigarLogo from "../assets/VeigarLogo.png"
 
 <div class="container">
     <div class="left">
-        <div class="logo">
+        <a href="/" class="logo">
             <img src={VeigarLogo.src} alt="Veigar Logo"/>
             <span>Veigar <span id="purple">v2</span></span>
-        </div>
+        </a>
         <div class="navigator"> 
-            <a>Home</a>
-            <a>For Teams</a>
+            <a href="/">Home</a>
+            <a href="/for-teams">For Teams</a>
             <a>For Individuals</a>
             <a>About VeigarV2</a>
             <a>FAQ</a>
@@ -76,6 +76,7 @@ import VeigarLogo from "../assets/VeigarLogo.png"
         flex-direction: row;
         gap: 10px;
         align-items: center;
+        text-decoration: none;
     }
     .logo img {
         height: 2rem;
@@ -96,6 +97,10 @@ import VeigarLogo from "../assets/VeigarLogo.png"
         font-size: 0.9rem;
         font-weight: 500;
         color: #AEAEAE;
+        text-decoration: none;
+    }
+    .navigator a:hover {
+        color: #fff;
     }
     .right {
         display: flex;
