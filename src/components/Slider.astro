@@ -10,22 +10,28 @@
             </div>
         </div>
         <div class="right">
-            <div class="card">
-                Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+            <div class="cards">
+                <div class="card">
+                    <span class="card-title">Introduction</span>
+                    <span class="card-text-1">A session lasts mainly for one hour, but usually a bit longer to assure everything has been mentioned and that the student's questions has been fully answered.The session begins with the student introducing themself to Veigar v2. Then, they will make their first impression by reviewing the student's OP.GG for mistakes regarding runes/build/cs numbers/history. Before diving into the VOD, there will be a brief conversation about why the student decided to receive a coaching. session, which specific aspect should be tackled, what the biggest struggles are and so forth.</span>
+                </div>
+                <div class="card">
+                    <span class="card-title">VOD Review</span>
+                    <span class="card-text-2">If the student has a relatively small champion pool or is an OTP, Veigar v2 will take the extra time to go over all the mechanics and unique actions you can execute with that particular champion. Soon after, the analytic part of the session starts, the VOD review. The VOD that will be analyzed is a recent game of the student that he/she and Veigar v2 have both agreed on to watch beforehand. Preferably, not a stomp game and chose a recorded POV that would serve you well for a coaching session. During the VOD review, Veigar v2 will question the student's decisions to make the student reflect on certain actions that lead to mistakes and bad performances. The coach will cover laning phase, Jungle interactions (such as pathing, vision control, which Jungler does what, etc.), wave management, how to play each stage of the game and a lot more.</span>
+                </div>
+                <div class="card">
+                    <span class="card-title">Coaching Summary</span>
+                    <span class="card-text-3">After the VOD review is finished, a conclusion will be made of all points that were mentioned during the session in order that the student understands the full picture of his conduct.At the end of the session, the student has the possiblity to pose questions if there are any left. (You can always leave him a message in the website chat to ask a question)</span>
+                </div>
             </div>
         </div>
         <div class="light-container">
             <div class="light"/>
         </div>
     </div>
-    <div class="test">JPODSADSAHBDHASDBABDHSDHSAHDBLA</div>
 </div>
 
 <style>
-    .test{
-        color : red;
-        text-align: center;
-    }
     .container {
         width: 100%;
         height: 100%;
@@ -33,19 +39,21 @@
         justify-content: center;
         position: relative;
         z-index: 1;
-        flex-direction: column;
+        overflow: hidden;
+        max-width: 100vw;
     }
     .rectangle {
         position: relative;
         margin-top: 4rem;
         display: flex;
         width: 60%;
+        gap: 2rem;
         height: 28rem;
         border-radius: 16px;
         border: 1px solid rgba(255, 255, 255, 0.08);
         background-color: rgba(0, 0, 0, 0.01);
-        backdrop-filter: blur(20px);
         z-index: 3;
+        flex-direction: row;
     }
     .left {
         width: 28%;
@@ -81,21 +89,53 @@
         height: 100%;
         display: flex;
         z-index: 3;
+        flex-direction: row;
+    }
+    .cards {
+        height: 100%;
+        display: flex;
+        z-index: 3;
+        flex-direction: row;
+        gap: 4rem;
     }
     .card {
         position: relative;
         display: flex;
-        width: 61%;
-        height: 80%;
-        margin-top: 20%;
+        height: 70%;
+        margin-top: 10%;
         border-radius: 16px;
         border: 1px solid rgba(255, 255, 255, 0.08);
         background-color: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(25px);
         z-index: 3;
         overflow: hidden;
-        color: #fff;
-        padding: 1rem;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        width: min-content;
+    }
+    .card-title {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+    }
+    .card-text-1 {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #ABADAF;
+        width: 30rem;
+    }
+    .card-text-2 {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #ABADAF;
+        width: 35rem;
+    }
+    .card-text-3 {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #ABADAF;
+        width: 17rem;
     }
     .light-container {
         position: absolute;

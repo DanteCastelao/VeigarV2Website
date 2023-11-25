@@ -1,13 +1,67 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Slider from "../components/Slider.astro";
+import BuyCard from "../components/BuyCard.astro";
+import CoachingCard from "../components/CoachingCard.astro";
+import Bjergsen from "../assets/Bjergsen.png";
+import Nemesis from "../assets/Nemesis.png";
+import Rekkles from "../assets/Rekkles.png";
+import Jensen from "../assets/Jensen.png";
+import Perkz from "../assets/Perkz.png";
+import Doublelift from "../assets/Doublelift.png";
+import Nisqy from "../assets/Nisqy.png";
 ---
 
 <Layout title="For Individuals">
     <div class="light"/>
     <div class="container">    
         <div class="title">Coaching for Individuals</div>
-        <Slider />
+        <div class="slider-container">
+            <Slider />
+        </div>
+        <div class="buy-cards">
+            <BuyCard title="1 Session" price="150" />
+            <BuyCard title="3 Sessions" price="400" />
+        </div>
+        <div class="coaching-cards">
+            <CoachingCard title="Coaching Requirements" text="Decent internet connection for a fine screenshare quality on Discord. Also a chosen gameplay that you recorded. Please upload the VOD either on Youtube or Twitch. If you were unable to record your in-game gameplay for example via OBS, Overwolf Outplayed, MedalTV, or others, alternatively, we can look into the client replay. Despite that, Veigar v2 is highly preferring POV replays based on the fact that he will then have a complete overview of your in-game decision making process in terms of camera management, map knowledge and awareness, mouseclicks, course of action during the laning phase (micro-management), macro management, and further important details." />
+            <CoachingCard titleLeft="Coaching Platform" text="Veigar V2's online coaching platform provides a simplified booking method for either a &quot;Regular Coaching Session&quot; or &quot;Verbal Session&quot; and additionally stores all of your Coaching VODs, which will be always available for a rewatch, to ensure the best of conveniences for all students. Afterwards you are always able to message Veigar if you have further questions." secondText="Hint: While rewatching, pause the VOD if you have not understood something, and take notes to efficiently memorise what you have to improve on." />
+            <div class="light-2"/>
+            <div class="light-3"/>
+        </div>
+        <div class="players">
+            <div class="title">Known players that got coached by Veigar v2</div>
+            <div class="players-grid">
+                <div class="player-card">
+                    <img src={Bjergsen.src} alt="Bjergsen Picture" />
+                    <span>Bjergsen</span>
+                </div>
+                <div class="player-card">
+                    <img src={Nemesis.src} alt="Nemesis Picture" />
+                    <span>Nemesis</span>
+                </div>
+                <div class="player-card">
+                    <img src={Rekkles.src} alt="Rekkles Picture" />
+                    <span>Rekkles</span>
+                </div>
+                <div class="player-card">
+                    <img src={Jensen.src} alt="Jensen Picture" />
+                    <span>Jensen</span>
+                </div>
+                <div class="player-card">
+                    <img src={Perkz.src} alt="Perkz Picture" />
+                    <span>Perkz</span>
+                </div>
+                <div class="player-card">
+                    <img src={Doublelift.src} alt="Doublelift Picture" />
+                    <span>Doublelift</span>
+                </div>
+                <div class="player-card-last">
+                    <img src={Nisqy.src} alt="Nisqy Picture" />
+                    <span>Nisqy</span>
+                </div>
+            </div>
+        </div>
     </div>
 </Layout>
 
@@ -26,15 +80,148 @@ import Slider from "../components/Slider.astro";
 		max-width: 100vw;
 	}
     .container {
-        height: 100vh;
+        flex-direction: column;
         margin-top: 6rem;
         position: relative;
         z-index: 2;
+        display: flex;
+        align-items: center;
     }
     .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         color: #fff;
         text-align: center;
+    }
+    .slider-container {
+        height: 42rem;
+    }
+    .buy-cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+        flex-direction: row;
+        margin-top: 10rem;
+        margin-bottom: 4rem;
+    }
+    @media screen and (max-width: 1480px) {
+        .buy-cards {
+            width: 60%;
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        .buy-cards {
+            width: 80%;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .buy-cards {
+            width: 90%;
+            flex-direction: column;
+            gap: 6rem;
+        }
+    }
+    .coaching-cards {
+        display: flex;
+        margin-top: 10rem;
+        gap: 4rem;
+        width: 100%;
+        flex-direction: column;
+        position: relative;
+    }
+    .players {
+        display: flex;
+        margin-top: 8rem;
+        gap: 6rem;
+        width: 60%;
+        flex-direction: column;
+    }
+    @media screen and (max-width: 1000px) {
+        .players {
+            width: 80%;
+        }
+        
+    }
+    .players-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 6rem;
+        margin-bottom: 10rem;
+        row-gap: 4rem;
+    }
+    @media screen and (max-width: 780px) {
+        .players-grid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+    }
+    .player-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        border-radius: 1rem;
+        padding: 0.9rem;
+        padding-bottom: 1.8rem;
+        background-color: rgba(255, 255, 255, 0.02);
+        border: 1px solid #272727;
+        border-radius: 6px;
+    }
+    .player-card-last {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        border-radius: 1rem;
+        padding: 0.9rem;
+        padding-bottom: 1.8rem;
+        background-color: rgba(255, 255, 255, 0.02);
+        border: 1px solid #272727;
+        border-radius: 6px;
+        grid-column: 2;
+        color: #fff;
+    }
+    @media screen and (max-width: 780px) {
+        .player-card-last {
+            grid-column: 1;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .players-grid {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+        }
+        
+    }
+    .player-card img {
+        height: 80%;
+    }
+    .player-card span {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+    }
+    .light-2 {
+        position: absolute;
+        width: 1177px;
+        height: 1112px;
+        right: -10%;
+        opacity: 0.4;
+        background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(163, 121, 231, 0.80) 30%, rgba(0, 0, 0, 0.00) 80%), radial-gradient(70.71% 70.71% at 50% 50%, #2AB4D9 0%, rgba(0, 0, 0, 0.00) 60%), radial-gradient(70.71% 70.71% at 50% 50%, #2AB4D9 0%, rgba(0, 0, 0, 0.00) 50%);
+        filter: blur(250px);
+    }
+    .light-3 {
+        position: absolute;
+        width: 1177px;
+        height: 1112px;
+        left: -20%;
+        bottom: 0;
+        opacity: 0.4;
+        background: radial-gradient(70.71% 70.71% at 50% 50%, #4B3A84 30%, rgba(0, 0, 0, 0.00) 80%), radial-gradient(70.71% 70.71% at 50% 50%, #2AB4D9 0%, rgba(0, 0, 0, 0.00) 60%), radial-gradient(70.71% 70.71% at 50% 50%, #2AB4D9 0%, rgba(0, 0, 0, 0.00) 50%);
+        filter: blur(250px);
     }
 </style>

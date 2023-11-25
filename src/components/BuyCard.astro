@@ -1,0 +1,95 @@
+---
+const { title, price } = Astro.props;
+---
+
+<div class="card">
+    <div class="container">
+        <div class="subcontainer">
+            <span class="title">{title}</span>
+            <div class="price">
+                <span class="price-text">${price}</span>
+                <span class="session-text">/session</span>
+            </div>
+            <div class="button">
+                <span>Book a Session -&gt;</span>
+            </div>
+        </div>
+        <div class="light"/>
+    </div>
+    <div class="back-light"/>
+</div>
+
+<style>
+    .card {
+        position: relative;
+        width: fit-content;
+    }
+    .container {
+        position: relative;
+        background-color: #07030F;
+        z-index: 1;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    .subcontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.02);
+        padding: 2rem;
+        z-index: 2;
+    }
+    .title {
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    .price-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+    }
+    .session-text {
+        font-size: 0.9rem;
+        color: #686767;
+        text-align: center;
+        margin-left: 0.2rem;
+    }
+    .light {
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        background-color: #3D3067;
+        filter: blur(100px);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+    .back-light {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #8952E0;
+        filter: blur(4px);
+    }
+    .button {
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 10px;
+        border: 1px solid #4B3A84;
+        background: var(--Radial, radial-gradient(50% 50% at 50% 50%, rgba(75, 58, 132, 0.20) 0%, rgba(33, 23, 66, 0.20) 100%));
+        display: inline-flex;
+        padding: 8px 25px;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
+</style>
