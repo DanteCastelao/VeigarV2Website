@@ -75,7 +75,7 @@ import Layout from "../layouts/Layout.astro";
                 <span>I will upload every coaching session (as long as the student that I'm coaching agrees with it) to my Patreon and you will be able to learn from their mistakes and from what I'm instructing them to do.</span>
                 <span>If you want to be successful with the game, then this is your opportunity to make it happen!</span>
             </div>
-            <a class="patreon-button">
+            <a href="https://patreon.com/veigarv2" class="patreon-button">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.1028 0C9.7353 0 6.18186 3.55344 6.18186 7.92099C6.18186 12.2757 9.7353 15.8172 14.1028 15.8172C18.4576 15.8172 22 12.2748 22 7.92099C22 3.55344 18.4576 0 14.1028 0ZM0 21.0979H3.86882V0H0" fill="white"/>
                 </svg>
@@ -92,6 +92,12 @@ import Layout from "../layouts/Layout.astro";
         justify-content: center;
         align-items: center;
         height: 60vh;
+    }
+    @media screen and (max-width: 870px) {
+        .banner {
+            display: none;
+        }
+        
     }
     .banner video {
         position: fixed;
@@ -334,5 +340,6 @@ import Layout from "../layouts/Layout.astro";
         background-color: #8952E0;
         color: #fff;
         width: fit-content;
+        text-decoration: none;
     }
 </style>

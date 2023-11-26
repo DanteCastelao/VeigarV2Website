@@ -10,9 +10,9 @@ const { title, price } = Astro.props;
                 <span class="price-text">${price}</span>
                 <span class="session-text">/session</span>
             </div>
-            <div class="button">
+            <a class="button">
                 <span>Book a Session -&gt;</span>
-            </div>
+            </a>
         </div>
         <div class="light"/>
     </div>
@@ -67,6 +67,7 @@ const { title, price } = Astro.props;
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
+
     }
     .back-light {
         position: absolute;
@@ -91,5 +92,11 @@ const { title, price } = Astro.props;
         width: fit-content;
         margin-left: 1.2rem;
         margin-right: 1.2rem;
+        z-index: 3;
+    }
+    .button:hover {
+        background: var(--Radial, radial-gradient(50% 50% at 50% 50%, rgba(75, 58, 132, 0.30) 0%, rgba(33, 23, 66, 0.30) 100%));
+        border: 1px solid #8952E0;
+        transition: 0.2s;
     }
 </style>

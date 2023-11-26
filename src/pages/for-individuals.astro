@@ -32,34 +32,34 @@ import Nisqy from "../assets/Nisqy.png";
         <div class="players">
             <div class="title">Known players that got coached by Veigar v2</div>
             <div class="players-grid">
-                <div class="player-card">
+                <a href="https://lol.gamepedia.com/Bjergsen" class="player-card">
                     <img src={Bjergsen.src} alt="Bjergsen Picture" />
                     <span>Bjergsen</span>
-                </div>
-                <div class="player-card">
+                </a>
+                <a href="https://lol.gamepedia.com/Nemesis" class="player-card">
                     <img src={Nemesis.src} alt="Nemesis Picture" />
                     <span>Nemesis</span>
-                </div>
-                <div class="player-card">
+                </a>
+                <a href="https://lol.gamepedia.com/Rekkles" class="player-card">
                     <img src={Rekkles.src} alt="Rekkles Picture" />
                     <span>Rekkles</span>
-                </div>
-                <div class="player-card">
+                </a>
+                <a href="https://lol.gamepedia.com/Jensen" class="player-card">
                     <img src={Jensen.src} alt="Jensen Picture" />
                     <span>Jensen</span>
-                </div>
-                <div class="player-card">
+                </a>
+                <a href="https://lol.gamepedia.com/Perkz" class="player-card">
                     <img src={Perkz.src} alt="Perkz Picture" />
                     <span>Perkz</span>
-                </div>
-                <div class="player-card">
+                </a>
+                <a href="https://lol.gamepedia.com/Doublelift" class="player-card">
                     <img src={Doublelift.src} alt="Doublelift Picture" />
                     <span>Doublelift</span>
-                </div>
-                <div class="player-card-last">
+                </a>
+                <a href="https://lol.gamepedia.com/Nisqy" class="player-card-last">
                     <img src={Nisqy.src} alt="Nisqy Picture" />
                     <span>Nisqy</span>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -141,7 +141,6 @@ import Nisqy from "../assets/Nisqy.png";
         .players {
             width: 80%;
         }
-        
     }
     .players-grid {
         display: grid;
@@ -169,6 +168,10 @@ import Nisqy from "../assets/Nisqy.png";
         background-color: rgba(255, 255, 255, 0.02);
         border: 1px solid #272727;
         border-radius: 6px;
+    }
+    .player-card:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        transition: 0.3s;
     }
     .player-card-last {
         display: flex;

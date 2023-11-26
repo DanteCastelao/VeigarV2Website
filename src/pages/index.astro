@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout.astro';
 		<div class="title">Veigar v2 turns coaching into an extraordinary experience</div>
 	</div>
 	<div class="cards">
-		<Card title="Coaching for Teams">
+		<Card title="Coaching for Teams" link="/for-teams">
 			<div class="icon">
 				<svg width="64" height="50" viewBox="0 0 64 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_137_1850)">
@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
 				</svg>
 			</div>
 		</Card>				
-		<Card title="Coaching for Individuals">
+		<Card title="Coaching for Individuals" link="/for-individuals">
 			<div class="icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="44" height="50" viewBox="0 0 44 50" fill="none">
 					<g clip-path="url(#clip0_137_1858)">
@@ -38,7 +38,7 @@ import Layout from '../layouts/Layout.astro';
 				</svg>
 			</div>
 		</Card>
-		<Card title="Over 1500 coaching VODs on Patreon">
+		<Card title="Over 1500 coaching VODs on Patreon" link="https://patreon.com/veigarv2">
 			<div class="icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
 					<path d="M50 19.0234C50 28.916 41.9531 36.9727 32.0508 36.9727C22.1191 36.9727 14.043 28.9258 14.043 19.0234C14.043 9.10156 22.1191 1.02539 32.0508 1.02539C41.9531 1.02539 50 9.10156 50 19.0234ZM0 48.9746H8.78906V1.02539H0V48.9746Z" fill="#FFFEFD"/>
@@ -51,7 +51,7 @@ import Layout from '../layouts/Layout.astro';
 			<span class="subtitle">About Veigar v2</span>
 			<span>Marius "Veigar v2" Aune is a Norwegian League of Legends coach. He was the Strategic Coach and Analyst for various LCS/LEC teams, currently working for Cloud9 in the LCS. Outside of League, he likes to take care of his bunny Snoopy.</span>
 		</div>
-		<a class="more">
+		<a href="/about" class="more">
 			Read more 
 			<svg xmlns="http://www.w3.org/2000/svg" width="13" height="19" viewBox="0 0 13 19" fill="none">
 				<path d="M2.70834 9.5H10.2917" stroke="white" stroke-opacity="0.92" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,7 +83,7 @@ import Layout from '../layouts/Layout.astro';
 					<path d="M22.4235 12.2708C22.5515 13.8228 21.4475 15.1829 19.9194 15.3669C19.9114 15.3669 19.9114 15.3669 19.9034 15.3669H19.8794C19.8314 15.3669 19.7834 15.3669 19.7434 15.3829C18.9673 15.4229 18.2553 15.1749 17.7193 14.7189C18.5433 13.9829 19.0153 12.8788 18.9193 11.6787C18.8633 11.0307 18.6393 10.4387 18.3033 9.93463C18.6073 9.78262 18.9593 9.68661 19.3194 9.65461C20.8874 9.51861 22.2875 10.6867 22.4235 12.2708Z" fill="#A379E7"/>
 					<path d="M24.0228 19.673C23.9588 20.449 23.4627 21.121 22.6307 21.5771C21.8307 22.0171 20.8226 22.2251 19.8225 22.2011C20.3986 21.6811 20.7346 21.033 20.7986 20.345C20.8786 19.3529 20.4066 18.4009 19.4625 17.6408C18.9265 17.2168 18.3025 16.8808 17.6224 16.6328C19.3905 16.1208 21.6146 16.4648 22.9827 17.5688C23.7188 18.1609 24.0948 18.9049 24.0228 19.673Z" fill="#A379E7"/>
 				</svg>
-				<span class="info-text" slot="text">Coached professional players like <a class="info-text-purple">Bjergsen</a>, <a class="info-text-purple">Nemesis</a>, <a class="info-text-purple">Rekkles</a>, <a class="info-text-purple">Doublelift</a>, and more</span>
+				<span class="info-text" slot="text">Coached professional players like <a href="https://lol.gamepedia.com/Bjergsen" class="info-text-purple">Bjergsen</a>, <a href="https://lol.gamepedia.com/Nemesis" class="info-text-purple">Nemesis</a>, <a href="https://lol.gamepedia.com/Rekkles" class="info-text-purple">Rekkles</a>, <a href="https://lol.gamepedia.com/Doublelift" class="info-text-purple">Doublelift</a>, and more.</span>
 			</Info>
 	</div>
 	<div class="youtube">
@@ -189,7 +189,6 @@ import Layout from '../layouts/Layout.astro';
 			max-height: none; 
 		}
 	}
-
 	.break {
 		margin-top: 14rem;
 		width: 60%;
@@ -204,6 +203,12 @@ import Layout from '../layouts/Layout.astro';
 		margin-left: 20%;
 		border: 1px solid rgba(255, 255, 255, 0.08);
 		overflow: hidden;
+	}
+	.break a {
+		text-decoration: none;
+	}
+	.break a:hover {
+		text-decoration: underline;
 	}
 	@media only screen and (max-width: 480px) {
 		.break {
@@ -257,6 +262,12 @@ import Layout from '../layouts/Layout.astro';
 		margin-left: 15%;
 		margin-right: 15%;
 	}
+	.infos a {
+		text-decoration: none;
+	}
+	.infos a:hover {
+		text-decoration: underline;
+	}	
 	@media only screen and (max-width: 992px) {
 		.infos {
 			margin-left: 10%;
