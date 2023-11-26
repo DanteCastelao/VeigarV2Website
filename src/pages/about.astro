@@ -1,0 +1,338 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="About">
+    <div class="banner">
+        <video id="banner-video" autoplay="" muted="" loop="" src="//veigarv2.com/assets/images/about-background.mp4"></video>
+        <h1>Meet the best Veigar in the world!</h1>
+    </div>
+    <div class="container">
+        <div class="info">
+            <div class="intro">
+                <span class="intro-title">Veigar v2 introduces himself:</span>
+                <span class="intro-text">My name is Marius, and I have played League of Legends since season 3. My peak elo is 1126 LP Challenger. I am a Challenger Mid, Jungle and Support player and I offer coaching to all roles.</span>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-container-left">
+                    <div class="timeline-element">
+                        <span class="season">Season 4</span>
+                        <span class="rank">Platinum</span>
+                    </div>
+                    <div class="timeline-element">
+                        <span class="season">Season 6</span>
+                        <span class="rank">Diamond 1</span>
+                    </div>
+                    <div class="timeline-element">
+                        <span class="season">Season 8</span>
+                        <span class="rank">Challenger 512 LP</span>
+                    </div>
+                    <div class="timeline-element">
+                        <span class="season">Season 10</span>
+                        <span class="rank">Challenger 612 LP</span>
+                    </div>
+                    <div class="timeline-element">
+                        <span class="season">Season 12</span>
+                        <span class="rank">Challenger 1040LP</span>
+                    </div>
+                </div>
+                <div class="timeline-container-right">
+                    <div class="timeline-element">
+                        <span class="season">Season 3</span>
+                        <span class="rank">Bronze</span>
+                    </div>
+                    <div class="timeline-element">
+                        <span class="season">Season 5</span>
+                        <span class="rank">Diamond 3</span>
+                    </div>
+                    <div class="timeline-element">
+                        <span class="season">Season 7</span>
+                        <span class="rank">Master</span>
+                    </div>
+                    <div class="timeline-element">
+                        <span class="season">Season 9</span>
+                        <span class="rank">Challenger 1126 LP</span>
+                    </div>
+                    <div class="timeline-element">
+                        <span class="season">Season 11</span>
+                        <span class="rank">Challenger 917 LP</span>
+                    </div>
+                    <div class="timeline-element-last">
+                        <span class="head">Season 13</span>
+                        <span class="rank">Challenger 838 LP So far</span>
+                    </div>
+                </div>
+            </div>
+            <div class="light"/>
+        </div>
+        <div class="youtube">
+            Watch him in Action!
+            <iframe class="video" src="https://www.youtube.com/embed/TityiUfWoFY" title="Veigar V2 Coaching Challenger China + EUW TF | Example Of A Coaching Session" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="patreon-card">
+            <span class="patreon-card-title">Join my Patreon for more educational content</span>
+            <div class="patreon-card-texts">
+                <span>On Patreon, I want to share my coaching sessions with all of you that I had with my students of all ranks, Pro Play reviews, tier lists and further information relating to the game. I am aware that not everybody is able to pay the full price of ( 145$ ) for a session and therefore I want to make sure that everybody is able to improve and learn League of Legends. Also, it is an opportunity for my followership to support my work and to expand the community.</span>
+                <span>I will upload every coaching session (as long as the student that I'm coaching agrees with it) to my Patreon and you will be able to learn from their mistakes and from what I'm instructing them to do.</span>
+                <span>If you want to be successful with the game, then this is your opportunity to make it happen!</span>
+            </div>
+            <a class="patreon-button">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.1028 0C9.7353 0 6.18186 3.55344 6.18186 7.92099C6.18186 12.2757 9.7353 15.8172 14.1028 15.8172C18.4576 15.8172 22 12.2748 22 7.92099C22 3.55344 18.4576 0 14.1028 0ZM0 21.0979H3.86882V0H0" fill="white"/>
+                </svg>
+                <span>Join my Patreon</span>
+            </a>
+        </div>
+        <div class="light-2"/>
+    </div>
+</Layout>
+
+<style>
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+    }
+    .banner video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    h1 {
+        color: #fff;
+        font-size: 3rem;
+        text-align: center;
+    }
+    .container {
+        position: relative;
+        display: flex;
+        width: 100%;
+        background-color: #140824;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        align-items: center;
+        flex-direction: column;
+    }
+    .info {
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        flex-direction: row;
+        gap: 10rem;
+    }
+    @media screen and (max-width: 1200px) {
+        .info {
+            flex-direction: column;
+            gap: 5rem;
+            justify-content: unset;
+        }
+    }
+    .intro {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.02);
+        border-radius: 16px;
+        gap: 1.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .intro-title {
+        color: #fff;
+        font-size: clamp(1.4rem, 5vw, 1.8rem);
+        font-weight: 700;
+    }
+    .intro-text {
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+    .timeline-container {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        justify-content: center;
+    }
+    .timeline-container-left {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 6rem;
+        align-items: flex-end;
+    }
+    .timeline-container-right {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .timeline-container-right .timeline-element {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 4rem;
+        width: max-content;
+        padding-left: 1.5rem;
+        padding-bottom: 8rem;
+        color: rgba(231, 231, 240, 0.80);
+        border-left: 1px solid rgba(255, 255, 255, 0.20);
+        font-size: 0.95rem;
+    }
+    .timeline-container-left .timeline-element {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 4rem;
+        width: max-content;
+        padding-right: 1.5rem;
+        padding-bottom: 8rem;
+        color: rgba(231, 231, 240, 0.80);
+        font-size: 0.95rem;
+        text-align: end;
+    }
+    .timeline-container-right .timeline-element::before {
+        background-color: #8952E0;
+        content: "";
+        display: block;
+        font-size: 1.5rem;
+        position: absolute;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        left: -0.5rem;
+    }
+    .timeline-container-left .timeline-element::after {
+        background-color: #8952E0;
+        content: "";
+        display: block;
+        font-size: 1.5rem;
+        position: absolute;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        right: -0.5rem;
+    }
+    .timeline-element-last {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 3rem;
+        padding-left: 1rem;
+        padding-bottom: 2rem;
+        color: rgba(231, 231, 240, 0.80);;
+        width: fit-content;
+        font-size: 0.95rem;
+    }
+    .timeline-element-last::before {
+        background-color: #8952E0;
+        content: "";
+        display: block;
+        font-size: 1.5rem;
+        position: absolute;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        left: -0.5rem;
+    }
+    .rank {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    .light {
+        position: absolute;
+        width: 1177px;
+        height: 1112px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0.4;
+        background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(163, 121, 231, 0.80) 30%, rgba(0, 0, 0, 0.00) 80%), radial-gradient(70.71% 70.71% at 50% 50%, #2AB4D9 0%, rgba(0, 0, 0, 0.00) 60%), radial-gradient(70.71% 70.71% at 50% 50%, #2AB4D9 0%, rgba(0, 0, 0, 0.00) 50%);
+        filter: blur(250px);
+    }
+	.light-2 {
+		background-color: #8952E0;
+		filter: blur(200px);
+		width: 811px;
+		height: 496px;
+		position: absolute;
+		z-index: 2;
+		left: 50%;
+        bottom: 0;
+    	transform: translate(-50%, 50%);
+		max-width: 100vw;
+	} 
+	.youtube {
+		color: #fff;
+		font-size: 3rem;
+		font-weight: 700;
+		text-align: center;
+		margin-top: 12rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 10rem;
+        width: 100%;
+	}
+	.video {
+		margin-top: 6rem;
+		width: 40%;
+		aspect-ratio: 16/9;
+	}
+	@media only screen and (max-width: 992px) {
+		.video {
+			width: 60%;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.video {
+			width: 80%;
+		}
+	}
+	@media only screen and (max-width: 480px) {
+		.video {
+			width: 100%;
+		}
+	}
+    .patreon-card {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.02);
+        border-radius: 16px;
+        gap: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        align-items: center;
+        position: relative;
+        z-index: 3;
+    }
+    .patreon-card-title {
+        color: #fff;
+        font-size: clamp(1.4rem, 5vw, 1.8rem);
+        font-weight: 600;
+        text-align: center;
+    }
+    .patreon-card-texts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+    .patreon-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.2rem;
+        padding-bottom: 0.8rem;
+        padding-top: 0.8rem;
+        border-radius: 6px;
+        background-color: #8952E0;
+        color: #fff;
+        width: fit-content;
+    }
+</style>
