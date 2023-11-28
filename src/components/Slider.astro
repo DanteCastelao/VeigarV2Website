@@ -1,8 +1,27 @@
 ---
 ---
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const cardsContainer = document.querySelector(".cards");
+
+        const cards = document.querySelectorAll(".card");
+        if (cards.length === 0 || !cardsContainer) {
+            return;
+        }
+
+        cards.forEach((card, index) => {
+            card.addEventListener("click", function () {
+                const firstCard = cardsContainer.children[0];
+                cardsContainer.appendChild(firstCard);
+
+            });
+        });
+    });
+</script>
 
 <div class="container">
     <div class="rectangle">
+        <span class="mobile-title">How It Works</span>
         <div class="left">
             <span class="title">How It Works</span>
             <a class="button">
@@ -12,19 +31,22 @@
         <div class="right">
             <div class="cards">
                 <div class="card">
+                    <span class="card-title">Coaching Summary</span>
+                    <span class="card-text">After the VOD review is finished, a conclusion will be made of all points that were mentioned during the session in order that the student understands the full picture of his conduct.At the end of the session, the student has the possiblity to pose questions if there are any left. (You can always leave him a message in the website chat to ask a question)</span>
+                </div>
+                <div class="card">
                     <span class="card-title">Introduction</span>
-                    <span class="card-text-1">A session lasts mainly for one hour, but usually a bit longer to assure everything has been mentioned and that the student's questions has been fully answered.The session begins with the student introducing themself to Veigar v2. Then, they will make their first impression by reviewing the student's OP.GG for mistakes regarding runes/build/cs numbers/history. Before diving into the VOD, there will be a brief conversation about why the student decided to receive a coaching. session, which specific aspect should be tackled, what the biggest struggles are and so forth.</span>
+                    <span class="card-text">A session lasts mainly for one hour, but usually a bit longer to assure everything has been mentioned and that the student's questions has been fully answered.The session begins with the student introducing themself to Veigar v2. Then, they will make their first impression by reviewing the student's OP.GG for mistakes regarding runes/build/cs numbers/history. Before diving into the VOD, there will be a brief conversation about why the student decided to receive a coaching. session, which specific aspect should be tackled, what the biggest struggles are and so forth.</span>
                 </div>
                 <div class="card">
                     <span class="card-title">VOD Review</span>
-                    <span class="card-text-2">If the student has a relatively small champion pool or is an OTP, Veigar v2 will take the extra time to go over all the mechanics and unique actions you can execute with that particular champion. Soon after, the analytic part of the session starts, the VOD review. The VOD that will be analyzed is a recent game of the student that he/she and Veigar v2 have both agreed on to watch beforehand. Preferably, not a stomp game and chose a recorded POV that would serve you well for a coaching session. During the VOD review, Veigar v2 will question the student's decisions to make the student reflect on certain actions that lead to mistakes and bad performances. The coach will cover laning phase, Jungle interactions (such as pathing, vision control, which Jungler does what, etc.), wave management, how to play each stage of the game and a lot more.</span>
-                </div>
-                <div class="card">
-                    <span class="card-title">Coaching Summary</span>
-                    <span class="card-text-3">After the VOD review is finished, a conclusion will be made of all points that were mentioned during the session in order that the student understands the full picture of his conduct.At the end of the session, the student has the possiblity to pose questions if there are any left. (You can always leave him a message in the website chat to ask a question)</span>
+                    <span class="card-text">If the student has a relatively small champion pool or is an OTP, Veigar v2 will take the extra time to go over all the mechanics and unique actions you can execute with that particular champion. Soon after, the analytic part of the session starts, the VOD review. The VOD that will be analyzed is a recent game of the student that he/she and Veigar v2 have both agreed on to watch beforehand. Preferably, not a stomp game and chose a recorded POV that would serve you well for a coaching session. During the VOD review, Veigar v2 will question the student's decisions to make the student reflect on certain actions that lead to mistakes and bad performances. The coach will cover laning phase, Jungle interactions (such as pathing, vision control, which Jungler does what, etc.), wave management, how to play each stage of the game and a lot more.</span>
                 </div>
             </div>
         </div>
+        <a class="mobile-button">
+            <span>Book a Session -&gt;</span>
+        </a>
         <div class="light-container">
             <div class="light"/>
         </div>
@@ -33,14 +55,23 @@
 
 <style>
     .container {
-        width: 100%;
+        width: 100vw;
         height: 100%;
         display: flex;
         justify-content: center;
         position: relative;
         z-index: 1;
         overflow: hidden;
-        max-width: 100vw;
+    }
+    @media screen and (max-width: 1500px) {
+        .container {
+            height: fit-content;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .container {
+            width: 90%;
+        }
     }
     .rectangle {
         position: relative;
@@ -55,6 +86,33 @@
         z-index: 3;
         flex-direction: row;
     }
+    @media screen and (max-width: 1500px) {
+        .rectangle {
+            padding: 2rem;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            flex-direction: column;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .rectangle {
+            width: 100%;
+            padding: 1rem;
+        }
+    }
+    .mobile-title {
+        display: none;
+        font-weight: 600;
+        font-size: 2.2rem;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+    }
+    @media screen and (max-width: 1500px) {
+        .mobile-title {
+            display: block;
+        }
+    }
     .left {
         width: 28%;
         height: 100%;
@@ -62,6 +120,11 @@
         flex-direction: column;
         padding-left: 3rem;
         padding-top: 2.5rem;
+    }
+    @media screen and (max-width: 1500px) {
+        .left {
+            display: none;
+        }
     }
     .title {
         font-weight: 600;
@@ -97,12 +160,35 @@
         z-index: 3;
         flex-direction: row;
     }
+    @media screen and (max-width: 1500px) {
+        .right {
+            width: 100%;
+            height: fit-content;
+            justify-content: center;
+        }
+    }
     .cards {
         height: 100%;
         display: flex;
         z-index: 3;
         flex-direction: row;
         gap: 4rem;
+    }
+    @media screen and (max-width: 1500px) {
+        .cards {
+            gap: 2rem;
+            flex-direction: column;
+        }
+    }
+    .cards .card:first-of-type {
+        visibility: hidden;
+        position: absolute;
+    }
+    @media screen and (max-width: 1500px) {
+        .cards .card:first-of-type {
+            visibility: visible;
+            position: relative;
+        }
     }
     .card {
         position: relative;
@@ -119,29 +205,41 @@
         gap: 2rem;
         padding: 2rem;
         width: min-content;
+        cursor: pointer;
+        user-select: none;
+    }
+    @media screen and (max-width: 1500px) {
+        .card {
+            margin-top: 0;
+            cursor: default;
+            height: fit-content;
+        }
     }
     .card-title {
         font-weight: 600;
         font-size: 1.5rem;
         color: #FFFFFF;
     }
-    .card-text-1 {
-        font-weight: 600;
-        font-size: 1rem;
-        color: #ABADAF;
-        width: 30rem;
-    }
-    .card-text-2 {
+    .card-text {
         font-weight: 600;
         font-size: 1rem;
         color: #ABADAF;
         width: 35rem;
     }
-    .card-text-3 {
-        font-weight: 600;
-        font-size: 1rem;
-        color: #ABADAF;
-        width: 17rem;
+    @media screen and (max-width: 1000px) {
+        .card-text {
+            width: 25rem;
+        }
+    }
+    @media screen and (max-width: 780px) {
+        .card-text {
+            width: 15rem;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .card-text {
+            width: 12rem;
+        }
     }
     .light-container {
         position: absolute;
@@ -152,11 +250,40 @@
         align-items: flex-end;
         overflow: hidden;
     }
+    @media screen and (max-width: 1500px) {
+        .light-container {
+            align-items: center;
+        }
+    }
+    .mobile-button {
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 10px;
+        border: 1px solid #4B3A84;
+        background: var(--Radial, radial-gradient(50% 50% at 50% 50%, rgba(75, 58, 132, 0.20) 0%, rgba(33, 23, 66, 0.20) 100%));
+        padding: 8px 25px;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        z-index: 3;
+        display: none;
+    }
+    @media screen and (max-width: 1500px) {
+        .mobile-button {
+            display: flex;
+        }
+    }
     .light {
         width: 50%;
 		height: 40%;
         background-color: #8952E0;
         filter: blur(120px);
+    }
+    @media screen and (max-width: 1500px) {
+        .light {
+            filter: blur(140px);
+        }
     }
 
 </style>

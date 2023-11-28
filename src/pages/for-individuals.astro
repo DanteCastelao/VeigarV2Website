@@ -96,6 +96,18 @@ import Nisqy from "../assets/Nisqy.png";
     .slider-container {
         height: 42rem;
     }
+    @media screen and (max-width: 1500px) {
+        .slider-container {
+            height: fit-content;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .slider-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
     .buy-cards {
         display: flex;
         justify-content: space-between;
@@ -126,9 +138,13 @@ import Nisqy from "../assets/Nisqy.png";
         display: flex;
         margin-top: 10rem;
         gap: 4rem;
-        width: 100%;
         flex-direction: column;
         position: relative;
+    }
+    @media screen and (max-width: 480px) {
+        .coaching-cards {
+            padding: 1rem;
+        }
     }
     .players {
         display: flex;
