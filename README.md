@@ -6,10 +6,10 @@ This repository showcases the reimagination and redesign of a prominent League o
 
 ## Before and After
 
-![Before1](images/before1.png)
-![After1](images/after1.png)
-![Before2](images/before2.png)
-![After2](images/after2.png)
+![Before1](images/before1.PNG)
+![After1](images/after1.PNG)
+![Before2](images/before2.PNG)
+![After2](images/after2.PNG)
 
 ### Websites:
 
